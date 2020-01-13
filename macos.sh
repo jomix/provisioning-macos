@@ -1,6 +1,12 @@
 #!/bin/bash
 
 
+#turn on ssh server
+sudo systemsetup -setremotelogin on
+#show ssh server
+sudo systemsetup -getremotelogin
+
+
 #install homebrew
 which -s brew
 if [[ $? != 0 ]] ; then
