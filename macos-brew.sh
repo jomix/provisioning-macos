@@ -1,6 +1,14 @@
 #!/bin/bash
 
 
+#turn on ssh server
+sudo systemsetup -setremotelogin on
+#show ssh server
+sudo systemsetup -getremotelogin
+#turn on screen sharing for all users
+sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -allowAccessFor -allUsers -privs -all -clientopts -setmenuextra -menuextra yes
+
+
 #install homebrew
 which -s brew
 if [[ $? != 0 ]] ; then
